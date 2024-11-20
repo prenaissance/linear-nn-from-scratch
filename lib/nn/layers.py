@@ -36,7 +36,7 @@ class Sigmoid(Module):
     def backward(
         self, input: NDArray[np.float32], loss_grad: NDArray[np.float32]
     ) -> NDArray[np.float32]:
-        return loss_grad * sigmoid(input) * (1 - sigmoid(input)) / input.shape[0] ** 2
+        return sigmoid(loss_grad) * (1 - sigmoid(loss_grad)) / input.shape[0] ** 2
 
 
 # class ReLU(Module):
