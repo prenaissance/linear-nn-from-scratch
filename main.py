@@ -54,7 +54,7 @@ def main():
     test_images = np.array(_test_images) / 255.0
 
     model = nn.Sequential(
-        nn.Linear(784, 512),
+        nn.Linear(784, 128),
         nn.Sigmoid(),
         nn.Linear(128, 10),
         nn.Softmax(),
